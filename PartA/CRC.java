@@ -26,7 +26,7 @@ public class CRC {
             divisor[i] = generator.charAt(i) - '0';
 
         // Calculation of CRC
-        for (int i = 0; i <= message.length(); i++) {
+        for (int i = 0; i < message.length(); i++) {
             if (data[i] == 1) {
                 for (int j = 0; j < divisor.length; j++)
                     data[i + j] ^= divisor[j];
