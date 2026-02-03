@@ -37,8 +37,6 @@ public class RED {
             // Determine if the packet is dropped or accepted
             if (queueLength >= threshold && rand.nextDouble() < dropProbability) {
                 System.out.println("Packet dropped (CONGESTION AVOIDANCE)");
-                // Decrement queue length when a packet is dropped
-                queueLength--;
             } else {
                 System.out.println("Packet accepted " + (i + 1));
                 queueLength++;
